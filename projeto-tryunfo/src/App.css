@@ -13,15 +13,12 @@ h1, h3 {
 }
 
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 153, 0);
   background-image: url('https://assets.turbologo.com/blog/en/2021/11/14061241/Konoha-symbol.png');
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
-/* https://psxbrasil.com.br/wp-content/uploads/2021/11/Fortnite-Naruto.jpg */
-
 
 /* Header */
 .header {
@@ -30,35 +27,33 @@ body {
   flex-wrap: wrap;
 }
 
-.content-dad {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px; */
-}
-
-.content-deck {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.carta-content{
-  background-color: aqua;
-  width: 200px;
-  display: flex;
-  flex-direction: row;
-}
-
 .card-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-content, .card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 500px;
 }
 
 img {
-  width: 100px;
+  width: 150px;
+  height: auto;
+  padding: 10px;
 }
 
 /* Footer */
 .rodapé {
   display: flex;
   justify-content: center;
+}
+
+.rodapé select {
+  width: 50%;
 }

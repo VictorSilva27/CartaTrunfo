@@ -14,28 +14,25 @@
 input, textarea, button {
     border: none;
     border-radius: 5px;
-    color: rgb(4, 3, 48);
-    transition-duration: 0.4s;
-  }
-  
-  select, option {
-    background-color: #f1f1f1;
-    border: none;
-    border-radius: 4px;
-    color: rgb(4, 3, 48);
-    padding: 16px 20px;
-    width: 80%;
-  }
-  
-  footer select {
-    width: 25%;
-  }
-  
-  input:focus, textarea:focus {
-    background-color: lightblue;
-  }
-  
-  button:hover {
-    background-color: black;
-    color: rgb(126, 124, 124);
-  }
+    color: rgb(255, 145, 0);
+    transition-duration: 0.5s;
+}
+
+select, option {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 4px;
+  color: rgb(4, 3, 48);
+  padding: 16px 20px;
+  width: 80%;
+}
+
+input:focus, textarea:focus {
+  background-color: rgb(255, 145, 0);
+  color: black;
+}
+
+button:hover {
+  background-color: rgb(255, 145, 0);
+  color: rgb(0, 0, 0);
+}

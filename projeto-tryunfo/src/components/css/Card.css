@@ -1,0 +1,16 @@
+.card-content-component {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgb(255, 145, 0);
+    border-radius: 10px;
+    background-color: black;
+    background-image: url('');
+    width: 250px;
+    height: 480px;
+}
+
+.img-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
