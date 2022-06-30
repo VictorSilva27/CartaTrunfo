@@ -1,81 +1,64 @@
+@import url(//db.onlinewebfonts.com/c/73fedd912ba11f583a359ce4c2e742ed?family=Ninja+Naruto);
+
 * {
   color: aliceblue;
-  line-height: 20px;
-  margin: 5px;
+  margin: 2px;
+  color: orange;
+}
+
+h1, h3 {
+  font-family: "Ninja Naruto"; src: url("//db.onlinewebfonts.com/t/73fedd912ba11f583a359ce4c2e742ed.eot");
+  padding: 10px;
   text-align: center;
 }
 
-h1 {
-  padding: 10px;
-}
-
 body {
-  background-color: gray;
+  background-color: rgb(0, 0, 0);
+  background-image: url('https://assets.turbologo.com/blog/en/2021/11/14061241/Konoha-symbol.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.main {
-  background-color: rgb(4, 3, 48);
+/* https://psxbrasil.com.br/wp-content/uploads/2021/11/Fortnite-Naruto.jpg */
+
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-input, textarea, button {
-  border: none;
-  border-radius: 5px;
-  color: rgb(4, 3, 48);
-  transition-duration: 0.4s;
+.content-dad {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px; */
 }
 
-select, option {
-  background-color: #f1f1f1;
-  border: none;
-  border-radius: 4px;
-  color: rgb(4, 3, 48);
-  padding: 16px 20px;
-  width: 50%;
+.content-deck {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-footer select {
-  width: 25%;
-}
-
-input:focus, textarea:focus {
-  background-color: lightblue;
-  border-bottom: 2px solid rgb(226, 2, 2);
-}
-
-button:hover {
-  background-color: black;
-  color: rgb(126, 124, 124);
-}
-
-.desc-content {
-  align-items: center;
+.carta-content{
+  background-color: aqua;
+  width: 200px;
   display: flex;
   flex-direction: row;
 }
 
-.content-dad {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  padding: 20px;
-}
-
-.form-content, .card-content {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  max-width: 501px;
-  min-width: 500px;
-}
-
-.card-content {
-  align-items: center;
-}
-
 .card-add {
-  background-color: rgb(124, 10, 10);
 }
 
 img {
   width: 100px;
+}
+
+/* Footer */
+.rodapé {
+  display: flex;
+  justify-content: center;
 }

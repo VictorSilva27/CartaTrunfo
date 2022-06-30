@@ -131,22 +131,32 @@ class App extends React.Component {
     if (value === 'normal'
       || value === 'raro'
       || value === 'muito raro') {
-      this.setState({ filterCard:
-        saveCard.filter((card) => card.rareInput === value) });
+      this.setState({
+        filterCard:
+          saveCard.filter((card) => card.rareInput === value)
+      });
     } else if (value === 'todas') {
-      this.setState({ filterCard:
-        saveCard });
+      this.setState({
+        filterCard:
+          saveCard
+      });
     } else if (value === true) {
-      this.setState({ filterCard:
-        saveCard.filter((card) => card.trunfoInput === true),
-      disabledFilter: true });
+      this.setState({
+        filterCard:
+          saveCard.filter((card) => card.trunfoInput === true),
+        disabledFilter: true
+      });
     } else if (value === false) {
-      this.setState({ filterCard:
-        saveCard,
-      disabledFilter: false });
+      this.setState({
+        filterCard:
+          saveCard,
+        disabledFilter: false
+      });
     } else {
-      this.setState({ filterCard:
-      saveCard.filter((card) => (card.nameInput).includes(value)) });
+      this.setState({
+        filterCard:
+          saveCard.filter((card) => (card.nameInput).includes(value))
+      });
     }
   }
 
@@ -166,56 +176,57 @@ class App extends React.Component {
       disabledFilter,
     } = this.state;
     return (
-      <section className="main">
-        <h1>Tryunfo</h1>
-        <header className="content-dad">
+      <section className="body">
+        <h1 className="title">Naruto Trunfo</h1>
+        <header className="header">
           <div className="form-content">
             <Form
-              cardName={ nameInput }
-              cardDescription={ descriptionInput }
-              cardAttr1={ attr1Input }
-              cardAttr2={ attr2Input }
-              cardAttr3={ attr3Input }
-              cardImage={ imgInput }
-              cardRare={ rareInput }
-              cardTrunfo={ trunfoInput }
-              onInputChange={ this.onInputChange }
-              isSaveButtonDisabled={ saveButton }
-              onSaveButtonClick={ this.saveCardToObj }
-              hasTrunfo={ hasTrunfo }
+              cardName={nameInput}
+              cardDescription={descriptionInput}
+              cardAttr1={attr1Input}
+              cardAttr2={attr2Input}
+              cardAttr3={attr3Input}
+              cardImage={imgInput}
+              cardRare={rareInput}
+              cardTrunfo={trunfoInput}
+              onInputChange={this.onInputChange}
+              isSaveButtonDisabled={saveButton}
+              onSaveButtonClick={this.saveCardToObj}
+              hasTrunfo={hasTrunfo}
             />
           </div>
+          
           <div className="card-content">
             <Card
-              cardName={ nameInput }
-              cardDescription={ descriptionInput }
-              cardAttr1={ attr1Input }
-              cardAttr2={ attr2Input }
-              cardAttr3={ attr3Input }
-              cardImage={ imgInput }
-              cardRare={ rareInput }
-              cardTrunfo={ trunfoInput }
+              cardName={nameInput}
+              cardDescription={descriptionInput}
+              cardAttr1={attr1Input}
+              cardAttr2={attr2Input}
+              cardAttr3={attr3Input}
+              cardImage={imgInput}
+              cardRare={rareInput}
+              cardTrunfo={trunfoInput}
             />
           </div>
         </header>
+
         <main className="card-add">
-          <h1> Aqui vai ficar as Cartas Adicionadas </h1>
-          <div className="card-add-item">
+          <h1> Minhas Cartas </h1>
             <ListCards
-              saveCard={ filterCard }
-              clearCard={ this.clearCard }
+              saveCard={filterCard}
+              clearCard={this.clearCard}
             />
-          </div>
         </main>
-        <footer>
+
+        <footer className="rodapé">
           <h3>Filtro</h3>
           <label htmlFor="name-filter">
             Nome
             <input
               type="text"
               data-testid="name-filter"
-              onChange={ this.filterName }
-              disabled={ disabledFilter }
+              onChange={this.filterName}
+              disabled={disabledFilter}
             />
           </label>
           <label htmlFor="rare-filter">
@@ -223,8 +234,8 @@ class App extends React.Component {
             <select
               data-testid="rare-filter"
               name="rareInput"
-              onChange={ this.filterName }
-              disabled={ disabledFilter }
+              onChange={this.filterName}
+              disabled={disabledFilter}
             >
               <option value="todas"> Todas </option>
               <option value="normal"> Normal </option>
@@ -237,7 +248,7 @@ class App extends React.Component {
             <input
               type="checkbox"
               data-testid="trunfo-filter"
-              onClick={ this.filterName }
+              onClick={this.filterName}
             />
           </label>
         </footer>

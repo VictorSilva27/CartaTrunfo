@@ -9,7 +9,7 @@ class ListCards extends React.Component {
       clearCard,
     } = this.props;
     return (
-      <div>
+      <div className="content-deck">
         {saveCard.map((card, index) => {
           const {
             nameInput,
@@ -22,7 +22,7 @@ class ListCards extends React.Component {
             trunfoInput,
           } = card;
           return (
-            <div key={ index }>
+            <div key={ index } className="carta-content">
               <Card
                 cardName={ nameInput }
                 cardDescription={ descriptionInput }
@@ -34,7 +34,7 @@ class ListCards extends React.Component {
                 cardTrunfo={ trunfoInput }
               />
 
-              <div>
+              <div className="btn-excluir">
                 <button
                   type="submit"
                   data-testid="delete-button"
