@@ -1,16 +1,30 @@
 .card-content-component {
     display: flex;
     flex-direction: column;
-    border: 5px solid rgb(255, 145, 0);
+    border: 5px solid rgb(255, 0, 0);
     border-radius: 10px;
-    background-color: black;
-    background-image: url('');
+    background-color: rgba(0, 0, 0, 0.678);
     width: 250px;
     height: 480px;
+    padding: 5px;
+    margin: 5px;
 }
 
-.img-card {
+.card-content-component p{
+    border-bottom: 2px solid red;
+    margin: 3px;
+}
+
+.img-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+}
+
+.img-card {
+    width: 150px;
+    height: 150px; 
+    border: 3px solid thistle;
+    border-radius: 5px;
 }

@@ -1,5 +1,13 @@
 .content-deck {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-add {
+  background-color: rgba(0, 0, 0, 0.616);
+}
+
+.content-deck h3{
+  color: aliceblue;
+}

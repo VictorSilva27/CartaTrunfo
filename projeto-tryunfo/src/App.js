@@ -11,7 +11,7 @@ class App extends React.Component {
     attr1Input: '',
     attr2Input: '',
     attr3Input: '',
-    imgInput: '',
+    imgInput: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROuBGlgxUsvX2fhUDIgqs9RG-f6KG0e62y5g&usqp=CAU',
     rareInput: '',
     trunfoInput: false,
     saveButton: true,
@@ -177,7 +177,7 @@ class App extends React.Component {
     } = this.state;
     return (
       <section className="body">
-        <h1 className="title">Naruto Trunfo</h1>
+        <h1 className="title">Uchiha Trunfo</h1>
         <header className="header">
           <div className="form-content">
             <Form
@@ -195,7 +195,7 @@ class App extends React.Component {
               hasTrunfo={hasTrunfo}
             />
           </div>
-          
+
           <div className="card-content">
             <Card
               cardName={nameInput}
@@ -212,45 +212,47 @@ class App extends React.Component {
 
         <main className="card-add">
           <h1> Minhas Cartas </h1>
-            <ListCards
-              saveCard={filterCard}
-              clearCard={this.clearCard}
-            />
+          <ListCards
+            saveCard={filterCard}
+            clearCard={this.clearCard}
+          />
         </main>
 
-        <footer className="rodapé">
+        <footer className="footer">
           <h3>Filtro</h3>
-          <label htmlFor="name-filter">
-            Nome
-            <input
-              type="text"
-              data-testid="name-filter"
-              onChange={this.filterName}
-              disabled={disabledFilter}
-            />
-          </label>
-          <label htmlFor="rare-filter">
-            Raro
-            <select
-              data-testid="rare-filter"
-              name="rareInput"
-              onChange={this.filterName}
-              disabled={disabledFilter}
-            >
-              <option value="todas"> Todas </option>
-              <option value="normal"> Normal </option>
-              <option value="raro"> Raro </option>
-              <option value="muito raro"> Muito Raro </option>
-            </select>
-          </label>
-          <label htmlFor="trunfo-filter">
-            Super Trunfo
-            <input
-              type="checkbox"
-              data-testid="trunfo-filter"
-              onClick={this.filterName}
-            />
-          </label>
+          <div className="filter-footer">
+            <label htmlFor="name-filter">
+              Nome
+              <input
+                type="text"
+                data-testid="name-filter"
+                onChange={this.filterName}
+                disabled={disabledFilter}
+              />
+            </label>
+            <label htmlFor="rare-filter">
+              Raro
+              <select
+                data-testid="rare-filter"
+                name="rareInput"
+                onChange={this.filterName}
+                disabled={disabledFilter}
+              >
+                <option value="todas"> Todas </option>
+                <option value="normal"> Normal </option>
+                <option value="raro"> Raro </option>
+                <option value="muito raro"> Muito Raro </option>
+              </select>
+            </label>
+            <label htmlFor="trunfo-filter">
+              Super Trunfo
+              <input
+                type="checkbox"
+                data-testid="trunfo-filter"
+                onClick={this.filterName}
+              />
+            </label>
+          </div>
         </footer>
       </section>
     );

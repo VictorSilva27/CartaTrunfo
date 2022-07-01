@@ -22,7 +22,7 @@ class Form extends React.Component {
     return (
       <form className="form-content-component">
 
-        <h3>Adiciona-Carta</h3>
+        <h3>Adicionar Trunfo</h3>
 
         <label htmlFor="name-input">
           Nome da Carta
@@ -120,7 +120,7 @@ class Form extends React.Component {
         {hasTrunfo
           ? <p> Você já tem um Super Trunfo em seu baralho </p>
           : (
-            <label htmlFor="trunfo-input">
+            <label htmlFor="trunfo-input" className="form-trunfo">
               Super Trunfo
               <input
                 type="checkbox"
