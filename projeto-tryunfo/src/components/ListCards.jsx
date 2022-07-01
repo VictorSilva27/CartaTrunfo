@@ -22,7 +22,7 @@ class ListCards extends React.Component {
             trunfoInput,
           } = card;
           return (
-            <div key={ index } className="carta-content">
+            <div key={ index } className="card-list">
               <Card
                 cardName={ nameInput }
                 cardDescription={ descriptionInput }
@@ -34,13 +34,20 @@ class ListCards extends React.Component {
                 cardTrunfo={ trunfoInput }
               />
 
-              <div className="btn-excluir">
+              <div>
                 <button
                   type="submit"
                   data-testid="delete-button"
-                  onClick={ () => clearCard(saveCard) }
+                  className="btn-delete"
+                  onClick={ () => clearCard(index) }
                 >
-                  Excluir
+                  Delete
+                  <img
+                    src='https://www.svgrepo.com/show/300470/shuriken.svg'
+                    alt='shuriken'
+                    width="25px"
+                    className="shuriken"
+                  />
                 </button>
               </div>
             </div>

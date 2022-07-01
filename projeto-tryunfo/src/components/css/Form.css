@@ -25,7 +25,7 @@ label {
   margin: 5px;
 }
 
-input, textarea, button {
+input, textarea {
   border: none;
   border-radius: 5px;
   color: rgb(255, 0, 0);
@@ -48,7 +48,21 @@ input:focus, textarea:focus {
   color: black;
 }
 
-button:hover {
+.btn-save:hover {
+  color: rgb(255, 0, 0);
+  background-color: aliceblue;
+}
+
+.btn-save:disabled{
+  color: rgb(255, 0, 0);
+  background-color: #141414;
+  padding: 10px;
+}
+
+.btn-save {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  color: #141414;
   background-color: rgb(255, 0, 0);
-  color: rgb(0, 0, 0);
 }

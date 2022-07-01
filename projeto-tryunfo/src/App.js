@@ -121,6 +121,7 @@ class App extends React.Component {
     const { filterCard, saveCard } = this.state;
     saveCard.splice(index, 1);
     this.setState({ saveCard }, () => this.validateTrunfo());
+    
     filterCard.splice(index, 1);
     this.setState({ filterCard }, () => this.validateTrunfo());
   }
@@ -128,14 +129,14 @@ class App extends React.Component {
   filterName = ({ target }) => {
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const { saveCard } = this.state;
-    if (value === 'normal'
-      || value === 'raro'
-      || value === 'muito raro') {
+    if (target.checked === 'Normal'
+      || target.checked === 'Raro'
+      || target.checked === 'Muito Raro') {
       this.setState({
         filterCard:
           saveCard.filter((card) => card.rareInput === value)
       });
-    } else if (value === 'todas') {
+    } else if (target.checked === 'Todas') {
       this.setState({
         filterCard:
           saveCard
@@ -217,34 +218,34 @@ class App extends React.Component {
             clearCard={this.clearCard}
           />
         </main>
-
         <footer className="footer">
-          <h3>Filtro</h3>
+          <h3>Filtros</h3>
           <div className="filter-footer">
             <label htmlFor="name-filter">
               Nome
               <input
                 type="text"
+                placeholder="Nome da Carta"
                 data-testid="name-filter"
                 onChange={this.filterName}
                 disabled={disabledFilter}
               />
             </label>
             <label htmlFor="rare-filter">
-              Raro
+              Raridade
               <select
                 data-testid="rare-filter"
                 name="rareInput"
                 onChange={this.filterName}
                 disabled={disabledFilter}
               >
-                <option value="todas"> Todas </option>
-                <option value="normal"> Normal </option>
-                <option value="raro"> Raro </option>
-                <option value="muito raro"> Muito Raro </option>
+                <option value="Todas"> Todas </option>
+                <option value="Normal"> Normal </option>
+                <option value="Raro"> Raro </option>
+                <option value="Muito raro"> Muito Raro </option>
               </select>
             </label>
-            <label htmlFor="trunfo-filter">
+            <label htmlFor="trunfo-filter" className="filter-trunfo">
               Super Trunfo
               <input
                 type="checkbox"

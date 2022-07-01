@@ -22,6 +22,10 @@ body {
   animation: logo-spin infinite 5s linear;
 }
 
+.shuriken {
+  animation: logo-spin infinite 5s linear;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,7 +40,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.678);
 }
 
 .card-add {
@@ -44,7 +48,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10px;
 }
 
 .form-content, .card-content {
@@ -53,6 +56,7 @@ body {
   align-items: center;
   width: 300px;
   height: 500px;
+  margin-bottom: 20px;
 }
 
 /* Footer */
@@ -71,6 +75,17 @@ body {
   align-items: center;
 }
 
+.footer label {
+  padding: 10px;
+}
+
+.filter-trunfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
 .footer select {
-  width: 80%;
+  width: 100%;
 }

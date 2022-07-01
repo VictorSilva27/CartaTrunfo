@@ -111,9 +111,9 @@ class Form extends React.Component {
             value={cardRare}
             onChange={onInputChange}
           >
-            <option value="normal"> Normal </option>
-            <option value="raro"> Raro </option>
-            <option value="muito raro"> Muito Raro </option>
+            <option value="Normal"> Normal </option>
+            <option value="Raro"> Raro </option>
+            <option value="Muito Raro"> Muito Raro </option>
           </select>
         </label>
 
@@ -136,6 +136,7 @@ class Form extends React.Component {
           <button
             type="submit"
             name="saveButton"
+            className="btn-save"
             data-testid="save-button"
             disabled={isSaveButtonDisabled}
             onClick={onSaveButtonClick}

@@ -5,9 +5,29 @@
 }
 
 .card-add {
-  background-color: rgba(0, 0, 0, 0.616);
+  background-color: rgba(0, 0, 0, 0.678)
 }
 
 .content-deck h3{
-  color: aliceblue;
+  color: rgba(240, 248, 255, 0);
+}
+
+.card-list {
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+.btn-delete {
+  border: none;
+  color: white;
+  background-color: rgb(255, 0, 0);
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn-delete:hover {
+  background-color: aliceblue;
+  color:  rgb(255, 0, 0);
 }

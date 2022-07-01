@@ -17,7 +17,7 @@ class Card extends React.Component {
     return (
       <div className='card-content-component'>
         <h3>Carta</h3>
-        <p data-testid="name-card">{`Nome: ${cardName}`}</p>
+        <p data-testid="name-card">{`Nome:... ${cardName}`}</p>
 
         <div className="img-content">
           <img
@@ -28,15 +28,15 @@ class Card extends React.Component {
           />
         </div>
 
-        <p data-testid="description-card">{`Descrição: ${cardDescription}`}</p>
+        <p data-testid="description-card">{`Descrição:... ${cardDescription}`}</p>
 
-        <p data-testid="attr1-card">{`Força: ${cardAttr1}`}</p>
+        <p data-testid="attr1-card">{`Força:... ${cardAttr1}`}</p>
 
-        <p data-testid="attr2-card">{`Chakra: ${cardAttr2}`}</p>
+        <p data-testid="attr2-card">{`Chakra:... ${cardAttr2}`}</p>
 
-        <p data-testid="attr3-card">{`Inteligência: ${cardAttr3}`}</p>
+        <p data-testid="attr3-card">{`Inteligência:... ${cardAttr3}`}</p>
 
-        <p data-testid="rare-card">{`Raridade: ${cardRare}`}</p>
+        <p data-testid="rare-card">{`Raridade:... ${cardRare}`}</p>
 
         {cardTrunfo && <p data-testid="trunfo-card"> Super Trunfo <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Mangekyou_Sharingan_Kakashi.svg/1024px-Mangekyou_Sharingan_Kakashi.svg.png' alt="sharingan" 
         width="20px"
